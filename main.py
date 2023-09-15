@@ -27,7 +27,7 @@ def my_hook(d):
 
 # Configure YouTube DL options
 ydl_opts = {
-    'writethumbnail': True,
+    'writethumbnail': False,
     'no_write_playlist_metafiles': True,                            # do not save playlist data, like playlist .png
     'format': 'bestaudio[asr<=44100]/best[asr<=44100]/bestaudio',   # using asr 44100 as max, this mitigates exotic compatibility issues with certain mediaplayers, and allow bestaudio as a fallback for direct mp3s
     'postprocessors': [{    
@@ -35,7 +35,7 @@ ydl_opts = {
         'preferredcodec': 'mp3',                                    # convert to MP3 format
         #'preferredquality': '192',                                 # with not specifying a preffered quality, the original bitrate will be used, therefore skipping one unnecessary conversion and keeping more quality
         },
-    {'key': 'EmbedThumbnail',},                                     # embed the Youtube thumbnail with the MP3 as coverart.
+#    {'key': 'EmbedThumbnail',},                                     # embed the Youtube thumbnail with the MP3 as coverart.
     ],
     'logger': MyLogger(),
     'progress_hooks': [my_hook],
