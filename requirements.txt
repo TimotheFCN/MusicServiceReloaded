@@ -1,5 +1,4 @@
-#youtube_dl==2021.12.17
-yt-dlp==2023.7.6
+yt-dlp @ git+https://github.com/yt-dlp/yt-dlp@master
 python-dotenv
 #os
 requests
