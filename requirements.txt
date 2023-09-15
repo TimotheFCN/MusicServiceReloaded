@@ -1,4 +1,4 @@
-youtube_dl @ git+https://github.com/ytdl-org/youtube-dl@master
+yt-dlp @ git+https://github.com/yt-dlp/yt-dlp@master
 python-dotenv
 #os
 requests
